@@ -5,3 +5,5 @@
 [color]
 	pager = true
 	ui = auto
+[push]
+	defaul = simple
