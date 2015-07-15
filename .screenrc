@@ -1,0 +1,6 @@
+startup_message off
+altscreen on
+hardstatus alwayslastline
+hardstatus string '%{.ky}%0c %Y-%m-%d %{.kr} %=%{.kg}[%-w%{.kr}%n %t%{.kg}%+w]'
+bell_msg "Bell in window %n ^G"
+vbell off
