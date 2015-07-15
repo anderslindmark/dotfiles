@@ -4,14 +4,10 @@ setopt EXTENDED_GLOB
 DOTFILE_DIR=~/dotfiles
 BACKUP_DIR=~/dotfiles/backup
 
-if [[ $(pwd) == $(realpath ~) ]]; then
-	echo "Dont use this command from ~/. Do \"cd $DOTFILE_DIR\" first"
-	exit 1
-fi
-
 mkdir BACKUP_DIR 2> /dev/null 
 
-for file in .^git; do
+for file in $DOTFILE_DIR/.^git; do
+	file=${file:t}
 	if [[ -e ~/$file ]]; then
 		if [[ -h ~/$file ]]; then
 			# $file is a symlink, check if target is the dotfiles-one
