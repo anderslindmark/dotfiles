@@ -1,0 +1,7 @@
+[user]
+	name = Anders Lindmark
+	email = anders.lindmark@gmail.com
+	signkey = 83BCA462
+[color]
+	pager = true
+	ui = auto
