@@ -6,4 +6,4 @@
 	pager = true
 	ui = auto
 [push]
-	defaul = simple
+	default = simple
