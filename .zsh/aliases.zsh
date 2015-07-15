@@ -1,4 +1,11 @@
-alias ll="ls -lAh --color"
+case `uname` in
+	Darwin)
+		alias ll="ls -lAhG"
+		;;
+	Linux)
+		alias ll="ls -lAh --color"
+esac
+
 alias l=ll
 alias c="ncal -bM"
 alias d="date +'%F %H:%M'"
