@@ -7,7 +7,7 @@ case `uname` in
 esac
 
 alias l=ll
-alias c="ncal -bM"
+alias c="gcal -K -s 1 ."
 alias d="date +'%F %H:%M'"
 alias pure-ftpwho="sudo docker exec -ti ftp_server /usr/sbin/pure-ftpwho"
 alias line="~/bin/line"
