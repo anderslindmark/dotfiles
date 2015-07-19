@@ -2,13 +2,14 @@
 setopt EXTENDED_GLOB
 
 DOTFILE_DIR=~/dotfiles
-BACKUP_DIR=~/dotfiles/backup
+BACKUP_DIR=$DOTFILE_DIR/backup
 
 mkdir BACKUP_DIR 2> /dev/null 
 
-for file in $DOTFILE_DIR/.^git; do
-	file=${file:t}
+for file in $DOTFILE_DIR/.^git; do # every dot-file except '.git'
+	file=${file:t} # stip leading path components
 	if [[ -e ~/$file ]]; then
+		# file exists in ~/
 		if [[ -h ~/$file ]]; then
 			# $file is a symlink, check if target is the dotfiles-one
 			if [[ $(readlink ~/$file) == $DOTFILE_DIR/$file ]]; then
